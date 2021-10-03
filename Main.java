@@ -23,7 +23,6 @@ public class Main {
 			int money = Integer.parseInt(in.next());
 
 			// SOLUCIÓN CON BÚSQUEDA BINARIA
-			ArrayList<Integer> diff = new ArrayList<>();
 			ArrayList<Integer> indexes = new ArrayList<>();
 
 			for (int i = 0; i < N; i++) {
@@ -54,13 +53,13 @@ public class Main {
 		int inicio = 0;
 		int fin = arr.size() - 1;
 		while (inicio <= fin) {
-			int indice = (fin + inicio) / 2;
-			if (arr.get(indice) == goal) {
-				return indice;
-			} else if (arr.get(indice) < goal) {
-				inicio = indice + 1;
+			int median = (fin + inicio) / 2;
+			if (arr.get(median) == goal) {
+				return median;
+			} else if (arr.get(median) < goal) {
+				inicio = median + 1;
 			} else {
-				fin = indice - 1;
+				fin = median - 1;
 			}
 		}
 		return -1;
