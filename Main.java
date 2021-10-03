@@ -35,7 +35,7 @@ public class Main {
 					}
 				}
 			}
-			System.out.printf("Peter should buy books whose prices are " + indexes.get(indexes.size()-1) + " and " + (money - indexes.get(indexes.size()-1)) + ".\n\n");
+			System.out.print("Peter should buy books whose prices are " + indexes.get(indexes.size()-1) + " and " + (money - indexes.get(indexes.size()-1)) + ".\n\n");
 
 		}
 	}
